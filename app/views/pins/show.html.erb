@@ -1,0 +1,34 @@
+
+<div class="container">
+ <div class="row">
+   <div class="col-md-6 col-md-offset-3">
+     <div class="well">
+		<p id="notice"><%= notice %></p>
+
+		<p>
+		  <strong>Nombre:</strong>
+		  <%= @pin.name %>
+		</p>
+
+		<p>
+		  <strong>Imagen:</strong>
+		  <%= image_tag(@pin.avatar.url(:mediano)) %>
+		</p>
+
+		<p>
+		  <strong>Descripcion:</strong>
+		  <%= @pin.descripcion %>
+		</p>
+
+		<%= link_to 'Edit', edit_pin_path(@pin) %> |
+		
+
+
+		<%= link_to 'Mas pins del mismo usuario', pinsof_path(@pin.user.id) %>
+
+     </div>
+
+   </div>
+ </div>
+
+</div>
